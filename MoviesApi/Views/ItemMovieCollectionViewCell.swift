@@ -34,12 +34,16 @@ class ItemMovieCollectionViewCell: UICollectionViewCell {
         imgCell.image = nil
         imgCell.af_cancelImageRequest()
         
-        let poster_path = movie.poster_path
-        let url = URL(string: Constants.baseImageUrl + "185" + poster_path)
+        if let poster_path = movie.poster_path, let url = URL(string: Constants.baseImageUrl + "185" + poster_path) {
             actIndicator.startAnimating()
-            imgCell.af_setImage(withURL: url!, imageTransition: .crossDissolve(0.2), completion: {(_) in
+            imgCell.af_setImage(withURL: url, imageTransition: .crossDissolve(0.2), completion: {(_) in
                 self.actIndicator.stopAnimating()
             })
+        }else{
+            self.imgCell.image = UIImage.init(named: "emptyImage")
+            self.actIndicator.stopAnimating()
+        }
     }
 }
+
 

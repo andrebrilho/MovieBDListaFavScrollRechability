@@ -38,13 +38,17 @@ class DetailViewController: UIViewController {
         imgMovie.image = nil
         imgMovie.af_cancelImageRequest()
         
-        let poster_path = movie.poster_path
-        let url = URL(string: Constants.baseImageUrl + "500" + poster_path)
+        if let poster_path = movie.poster_path, let url = URL(string: Constants.baseImageUrl + "500" + poster_path) {
             actIndicator.startAnimating()
-        imgMovie.af_setImage(withURL: url!, imageTransition: .crossDissolve(0.2), completion: {(_) in
+            imgMovie.af_setImage(withURL: url, imageTransition: .crossDissolve(0.2), completion: {(_) in
                 self.actIndicator.stopAnimating()
             })
+        }else{
+            self.imgMovie.image = UIImage.init(named: "emptyImage")
+            self.actIndicator.stopAnimating()
+        }
     }
+    
     
     @IBAction func btnVoltar(_ sender: Any) {
         self.dismiss(animated: true)

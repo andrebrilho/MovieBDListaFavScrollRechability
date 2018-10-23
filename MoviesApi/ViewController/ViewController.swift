@@ -154,10 +154,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 if indexPath.row == movies.count - 1 {
                     if Reachability.isConnectedToNetwork() {
                         numberPage += 1
-                        //TODO: tratar poster path vindo nulo
-                        if numberPage == 8 {
-                            numberPage += 5
-                        }
                         print(numberPage)
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                             MoviesApi.fetchMovies(NumberPage: self.numberPage, refresh: true, sucess: { (movies) in

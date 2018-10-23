@@ -163,7 +163,7 @@
                                     <action selector="btnVoltar:" destination="A6N-po-9zX" eventType="touchUpInside" id="oXg-zJ-wco"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UsX-E4-oLY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyImage" translatesAutoresizingMaskIntoConstraints="NO" id="UsX-E4-oLY">
                                 <rect key="frame" x="75" y="69" width="224" height="305"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="305" id="6i3-S7-BMX"/>
@@ -249,6 +249,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="emptyImage" width="209" height="325"/>
         <image name="star" width="1078" height="1025"/>
     </resources>
 </document>

@@ -37,7 +37,7 @@ class MoviesApi {
                 }else{
                     if let data = data {
                         do {
-                            var movies = try JSONDecoder().decode(MoviesResponse.self, from: data)
+                            var movies = try JSONDecoder().decode(MoviesResponse.self, from: data)                            
                             var moviesCount = movies.results!.count
                             DispatchQueue.main.async {
                                 do {

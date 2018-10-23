@@ -14,7 +14,7 @@ class MovieModel: Object, Codable {
     @objc dynamic var id = 0
     @objc dynamic var title = ""
     @objc dynamic var popularity = 0.0
-    @objc dynamic var poster_path = ""
+    @objc dynamic var poster_path: String? = nil
     @objc dynamic var original_title = ""
     @objc dynamic var overview = ""
     @objc dynamic var favorito = false

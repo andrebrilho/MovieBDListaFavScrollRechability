@@ -23,7 +23,7 @@
                         <rect key="frame" x="46" y="72" width="20" height="20"/>
                         <color key="color" red="0.054097779550000002" green="0.34281805199999998" blue="0.02647692871" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </activityIndicatorView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zgd-E4-aQd">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="emptyImage" translatesAutoresizingMaskIntoConstraints="NO" id="Zgd-E4-aQd">
                         <rect key="frame" x="0.0" y="0.0" width="112" height="164"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.corberRadius">
@@ -84,6 +84,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="emptyImage" width="209" height="325"/>
         <image name="star" width="1078" height="1025"/>
     </resources>
 </document>
